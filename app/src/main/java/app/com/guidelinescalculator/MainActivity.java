@@ -3,6 +3,7 @@ package app.com.guidelinescalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -29,39 +30,44 @@ public class MainActivity extends AppCompatActivity {
         String rightS = binding.editTextLeft.getText().toString();
         String topS = binding.editTextLeft.getText().toString();
         String bottomS = binding.editTextLeft.getText().toString();
-        String widthS = binding.editTextLeft.getText().toString();
-        String heightS = binding.editTextLeft.getText().toString();
+        String widthS = binding.editTextWidth.getText().toString();
+        String heightS = binding.editTextHeight.getText().toString();
         
         double width = 0;
         double height = 0;
         
-        if(!StringChecker.isEmpty(widthS) && !StringChecker.isEmpty(heightS)) {
+        if((!StringChecker.isEmpty(widthS)) && (!StringChecker.isEmpty(heightS))) {
             width = Double.parseDouble(widthS);
             height = Double.parseDouble(heightS);
         } else {
             Snackbar.make(view,"Width/Height is empty",Snackbar.LENGTH_SHORT);
             return;
         }
-        
+        Log.wtf("-this","Width : "+width);
+        Log.wtf("-this","height : "+height);
         if(!StringChecker.isEmpty(leftS)) {
             double left = Double.parseDouble(leftS);
+            Log.wtf("-this","left : "+left);
             binding.textViewLeft.setText(getPercent(left,width)+"");
         }
     
         if(!StringChecker.isEmpty(rightS)) {
             double right = Double.parseDouble(rightS);
             right = width - right;
+            Log.wtf("-this","right : "+right);
             binding.textViewRight.setText(getPercent(right,width)+"");
         }
     
         if(!StringChecker.isEmpty(topS)) {
             double top = Double.parseDouble(topS);
+            Log.wtf("-this","top : "+top);
             binding.textViewTop.setText(getPercent(top,height)+"");
         }
     
         if(!StringChecker.isEmpty(bottomS)) {
             double bottom = Double.parseDouble(bottomS);
             bottom = height - bottom;
+            Log.wtf("-this","bottom : "+bottom);
             binding.textViewBottom.setText(getPercent(bottom,height)+"");
         }
         
@@ -81,8 +87,9 @@ public class MainActivity extends AppCompatActivity {
         binding.textViewBottom.setText("");
         
     }
-    public double getPercent(double val, double max) {
+    public String getPercent(double val, double max) {
         double ans = (val/max);
-        return ans;
+        Log.wtf("-this"," Ans : "+ans);
+        return String.format("%.2f", ans);
     }
 }
