@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCLear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="CLear"
+        android:onClick="clear"
+        />
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:layout_margin="20dp"
+       android:gravity="center_horizontal"
+       android:layout_below="@id/buttonCLear"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textview.MaterialTextView
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:text="Left"
+               android:gravity="center"
+               />
+
+           <EditText
+               android:id="@+id/editTextLeft"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:inputType="number"
+               android:gravity="center"
+               />
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/textViewLeft"
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+               android:textColor="@color/purple_700"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textview.MaterialTextView
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:text="Right"
+               android:gravity="center"
+               />
+
+           <EditText
+               android:id="@+id/editTextRight"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:inputType="number"
+               android:gravity="center"
+               />
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/textViewRight"
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+               android:textColor="@color/purple_700"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textview.MaterialTextView
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:text="Top"
+               android:gravity="center"
+               />
+
+           <EditText
+               android:id="@+id/editTextTop"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:inputType="number"
+               android:gravity="center"
+               />
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/textViewTop"
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+               android:textColor="@color/purple_700"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textview.MaterialTextView
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:text="Bottom"
+               android:gravity="center"
+               />
+
+           <EditText
+               android:id="@+id/editTextBottom"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+               android:inputType="number"
+               />
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/textViewBottom"
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+
+               android:textColor="@color/purple_700"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textview.MaterialTextView
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:text="Total Width "
+               android:gravity="center"
+               />
+
+           <EditText
+               android:id="@+id/editTextWidth"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+               android:inputType="number"
+               />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textview.MaterialTextView
+               style="@style/TextAppearance.AppCompat.Medium"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:text="Total Height "
+               android:gravity="center"
+               />
+
+           <EditText
+               android:id="@+id/editTextHeight"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:gravity="center"
+               android:inputType="number"
+               />
+
+       </LinearLayout>
+
+
+       <com.google.android.material.button.MaterialButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+           android:text="Calculate"
+           android:onClick="calculate"
+           />
+
+
+
+
+
+   </LinearLayout>
+
+</RelativeLayout>
