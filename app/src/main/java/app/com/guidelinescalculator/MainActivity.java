@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     
     public void calculate(View view) {
         String leftS = binding.editTextLeft.getText().toString();
-        String rightS = binding.editTextLeft.getText().toString();
-        String topS = binding.editTextLeft.getText().toString();
-        String bottomS = binding.editTextLeft.getText().toString();
+        String rightS = binding.editTextRight.getText().toString();
+        String topS = binding.editTextTop.getText().toString();
+        String bottomS = binding.editTextBottom.getText().toString();
         String widthS = binding.editTextWidth.getText().toString();
         String heightS = binding.editTextHeight.getText().toString();
         
@@ -90,6 +90,6 @@ public class MainActivity extends AppCompatActivity {
     public String getPercent(double val, double max) {
         double ans = (val/max);
         Log.wtf("-this"," Ans : "+ans);
-        return String.format("%.2f", ans);
+        return String.format("%.4f", ans);
     }
 }
